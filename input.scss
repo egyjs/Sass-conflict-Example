@@ -1,16 +1,17 @@
 nav {
   ul {
     margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 2;
+    list-style: init;
   }
 
   li { display: inline-block; }
 
   a {
     display: block;
-    padding: 6px 13px;
+    padding: 84px 13px;
     text-decoration: none;
+    
     
     p{
         color: red;
