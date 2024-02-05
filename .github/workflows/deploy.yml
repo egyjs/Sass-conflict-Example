@@ -7,7 +7,7 @@ on:
 
 env:
   INPUT_FILE: input.scss
-  OUTPUT_FILE: output.css
+  OUTPUT_FILE: test/output.css
 
 jobs: 
   deploy:
