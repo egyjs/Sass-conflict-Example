@@ -2,6 +2,12 @@ on:
   push:
     branches:
       - master
+    # tags:
+    #   - v*
+
+env:
+  INPUT_FILE: input.scss
+  OUTPUT_FILE: output.css
 
 jobs: 
   deploy:
@@ -17,13 +23,13 @@ jobs:
         run: npm install -g sass
 
       - name: Build
-        run: sass input.scss:output.css
+        run: sass ${{ env.INPUT_FILE }}:${{ env.OUTPUT_FILE }}
 
       - name: Commit files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add output.css --force
+          git add ${{ env.OUTPUT_FILE }} --force
           git commit -m "Build: ${{ github.event.head_commit.message }}" --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" | echo "No changes to commit"
 
       - name: Push changes
