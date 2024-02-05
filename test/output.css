@@ -5,6 +5,9 @@ nav ul {
   height: 40px;
   padding: 23;
   list-style: none;
+  height: 403px;
+  padding: 2;
+  list-style: init;
 }
 nav li {
   display: inline-block;
