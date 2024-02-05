@@ -1,0 +1,23 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 40px;
+  padding: 2;
+  list-style: init;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 84px 13px;
+  text-decoration: none;
+}
+nav a p {
+  color: black;
+  width: 100px;
+  quotes: none;
+}
+
+/*# sourceMappingURL=output.css.map */
