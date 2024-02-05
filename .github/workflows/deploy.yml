@@ -13,8 +13,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4.0.1
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Sass
+        run: npm install -g sass
 
       - name: Build
         run: sass --watch input.scss output.css
