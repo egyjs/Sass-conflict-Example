@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron: '* * * * *'
+
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "test"
+
+      - name: "current time"
+        run: echo "current time is $(date)"
+
+      - name: "curl command"
+        run: for i in {1..100}; do curl -s -o /dev/null -w "%{http_code}\n" https://unidevs.co/ & done
